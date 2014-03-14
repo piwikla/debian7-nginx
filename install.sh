@@ -16,14 +16,14 @@ apt-get upgrade
 apt-get remove -y apache2 apache2-doc apache2-utils apache2.2-common apache2.2-bin apache2-mpm-prefork apache2-doc apache2-mpm-worker  
 
 #Install Nginx
-apt-get install -y nginx-full -y
+apt-get install -y nginx-full
 
 #Install MySQL
-apt-get install mysql-server mysql-client -y
+apt-get install -y mysql-server mysql-client
 mysql_secure_installation
 
 #Install PHP 
-apt-get install php5-fpm php5-gd php5-mysql php5-memcache php5-curl memcached -y
+apt-get install -y php5-fpm php5-gd php5-mysql php5-memcache php5-curl memcached
 
 #Basic Security
 apt-get install fail2ban iptables-persistent
