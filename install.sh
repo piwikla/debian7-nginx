@@ -29,6 +29,9 @@ apt-get install -y php5-fpm php5-gd php5-mysql php5-memcache php5-curl memcached
 apt-get install php5-geoip php5-dev libgeoip-dev
 pecl install geoip
 
+#LOAD DATA INFILE
+apt-get install php5-mysqlnd
+
 #Basic Security
 apt-get install fail2ban iptables-persistent
 
