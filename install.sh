@@ -36,6 +36,20 @@ apt-get install php5-mysqlnd
 apt-get install phpmyadmin
 sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
 
+#config nginx
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
+ln -s /etc/nginx/sites-available/piwik.la /etc/nginx/sites-enabled
+rm /etc/nginx/sites-enabled/default
+
+#download piwik
+mkdir -p /home/piwik/public_html/piwik.la
+cd /home/piwik/public_html/piwik.la
+wget http://piwik.org/latest.zip && unzip latest.zip
+cd piwik
+mv * ../
+cd ../
+rm -rf piwik
+
 #Basic Security
 apt-get install fail2ban iptables-persistent
 
