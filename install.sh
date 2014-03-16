@@ -32,6 +32,10 @@ pecl install geoip
 #LOAD DATA INFILE
 apt-get install php5-mysqlnd
 
+#Install phpMyAdmin
+apt-get install phpmyadmin
+sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
+
 #Basic Security
 apt-get install fail2ban iptables-persistent
 
