@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#https://github.com/xiaoq-in/debian7-nginx
+#https://github.com/piwikla/debian7-nginx
 
 #Add Dotdeb
 echo "deb http://packages.dotdeb.org wheezy all" >> /etc/apt/sources.list
