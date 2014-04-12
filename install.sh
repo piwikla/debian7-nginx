@@ -56,5 +56,7 @@ apt-get install fail2ban iptables-persistent
 #Remove Apache2
 apt-get remove -y apache2 apache2-doc apache2-utils apache2.2-common apache2.2-bin apache2-mpm-prefork apache2-doc apache2-mpm-worker  
 
-#Start Nginx
-service nginx start
+#Restart Service
+sudo service php5-fpm restart
+sudo service nginx restart
+sudo service mysql restart
