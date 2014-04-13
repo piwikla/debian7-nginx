@@ -45,10 +45,13 @@ rm /etc/nginx/sites-enabled/default
 mkdir -p /home/piwik/public_html/piwik.la
 cd /home/piwik/public_html/piwik.la
 wget http://piwik.org/latest.zip && unzip latest.zip
+rm How\ to\ install\ Piwik.html
 cd piwik
 mv * ../
 cd ../
-rm -rf piwik
+rm -rf piwik latest.zip
+sudo chown -R www-data:www-data /home/piwik/public_html/piwik.la
+sudo chmod 755 /home/piwik/public_html
 
 #Basic Security
 apt-get install fail2ban iptables-persistent
