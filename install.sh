@@ -44,12 +44,12 @@ rm /etc/nginx/sites-enabled/default
 #download piwik
 mkdir -p /home/piwik/public_html/piwik.la
 cd /home/piwik/public_html/piwik.la
-wget http://piwik.org/latest.zip && unzip latest.zip
+wget http://piwik.org/latest.zip && unzip piwik.zip
 rm How\ to\ install\ Piwik.html
 cd piwik
 mv * ../
 cd ../
-rm -rf piwik latest.zip
+rm -rf piwik piwik.zip
 sudo chown -R www-data:www-data /home/piwik/public_html/piwik.la
 sudo chmod 755 /home/piwik/public_html
 
